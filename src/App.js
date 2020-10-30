@@ -4,19 +4,19 @@ import { Provider } from 'react-redux';
 import Cart from './components/Cart';
 import Filter from './components/Filter';
 import Products from './components/Products';
-import data from './data.json';
+/* import data from './data.json'; */
 import store from './store';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      products: data.products,
+      /* products: data.products, */
       cartItems: localStorage.getItem('cartItems')
         ? JSON.parse(localStorage.getItem('cartItems'))
         : [],
-      size: '',
-      sort: '',
+      /*  size: '',
+      sort: '', */
     };
   }
 
@@ -51,7 +51,7 @@ class App extends React.Component {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   };
 
-  sortProducts = (e) => {
+  /*   sortProducts = (e) => {
     const sort = e.target.value;
     this.setState((state) => ({
       sort: sort,
@@ -71,9 +71,9 @@ class App extends React.Component {
             : -1
         ),
     }));
-  };
+  }; */
 
-  filterProducts = (e) => {
+  /*   filterProducts = (e) => {
     if (e.target.value === '') {
       this.setState({ size: e.target.value, products: data.products });
     } else {
@@ -84,7 +84,7 @@ class App extends React.Component {
         ),
       });
     }
-  };
+  }; */
 
   render() {
     return (
@@ -97,14 +97,14 @@ class App extends React.Component {
             <div className='content'>
               <div className='main'>
                 <Filter
-                  count={this.state.products.length}
+                /*count={this.state.products.length}
                   size={this.state.size}
                   sort={this.state.sort}
                   filterProducts={this.filterProducts}
-                  sortProducts={this.sortProducts}
+                  sortProducts={this.sortProducts}*/
                 />
                 <Products
-                  products={this.state.products}
+                  /*products={this.state.products}*/
                   addToCart={this.addToCart}
                 />
               </div>
