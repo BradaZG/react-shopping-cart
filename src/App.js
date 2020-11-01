@@ -8,23 +8,23 @@ import Products from './components/Products';
 import store from './store';
 
 class App extends React.Component {
-  constructor() {
+  /* constructor() {
     super();
     this.state = {
-      /* products: data.products, */
+      products: data.products,
       cartItems: localStorage.getItem('cartItems')
         ? JSON.parse(localStorage.getItem('cartItems'))
         : [],
-      /*  size: '',
-      sort: '', */
+      size: '',
+      sort: '',
     };
-  }
+  } */
 
-  createOrder = (order) => {
+  /* createOrder = (order) => {
     alert('Need to save order for ' + order.name);
-  };
+  }; */
 
-  removeFromCart = (product) => {
+  /* removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     this.setState({
       cartItems: cartItems.filter((x) => x._id !== product._id),
@@ -33,9 +33,9 @@ class App extends React.Component {
       'cartItems',
       JSON.stringify(cartItems.filter((x) => x._id !== product._id))
     );
-  };
+  }; */
 
-  addToCart = (product) => {
+  /* addToCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     let alreadyInCart = false;
     cartItems.forEach((item) => {
@@ -49,9 +49,9 @@ class App extends React.Component {
     }
     this.setState({ cartItems: cartItems });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  };
+  }; */
 
-  /*   sortProducts = (e) => {
+  /* sortProducts = (e) => {
     const sort = e.target.value;
     this.setState((state) => ({
       sort: sort,
@@ -73,7 +73,7 @@ class App extends React.Component {
     }));
   }; */
 
-  /*   filterProducts = (e) => {
+  /* filterProducts = (e) => {
     if (e.target.value === '') {
       this.setState({ size: e.target.value, products: data.products });
     } else {
@@ -104,15 +104,15 @@ class App extends React.Component {
                   sortProducts={this.sortProducts}*/
                 />
                 <Products
-                  /*products={this.state.products}*/
-                  addToCart={this.addToCart}
+                /*products={this.state.products}
+                  addToCart={this.addToCart}*/
                 />
               </div>
               <div className='sidebar'>
                 <Cart
-                  cartItems={this.state.cartItems}
+                /*cartItems={this.state.cartItems}
                   removeFromCart={this.removeFromCart}
-                  createOrder={this.createOrder}
+                  createOrder={this.createOrder}*/
                 />
               </div>
             </div>
